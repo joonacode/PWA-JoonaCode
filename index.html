@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Joona Code</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00897B" />
+  <meta name="description" content="Joona Code" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/materialize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  
+</head>
+
+<body>
+  <!-- Navigasi -->
+  <nav class="teal darken-4" role="navigation">
+    <div class="nav-wrapper container-fluid">
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      <a href="#home" class="brand-logo left link-action" id="logo-container">
+        Joona Code
+      </a>
+
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+
+  <!-- Header -->
+  <header class="pt-5 teal darken-4 header-utama">
+    <div class="container-fluid header-flex">
+      <div class="m-min">
+        <h1 class="header-title">Joona Code</h1>
+        <p class="header-desc">
+          Tempat belajar web programming dan download source code gratis
+        </p>
+      </div>
+      <img src="img/dev.svg" class="img-header animate" alt="developer">
+    </div>
+  </header>
+  <!-- Akhir Header -->
+
+  <div class="container panel">
+    <section class="card-panel white lighten-4" id="info">
+      <div class="row mb-0">
+        <div class="col s6 m4 mb-s-1">
+          <div class="atas">
+            <img src="img/sourcecode.svg" width="50" class="mb-1" alt="source code">
+            Download Source Gratis
+          </div>
+        </div>
+        <div class="col s6 m4 mb-s-1">
+          <div class="atas">
+            <img src="img/discussion.svg" width="50" class="mb-1" alt="discussion">
+            Tempat Diskusi
+          </div>
+        </div>
+        <div class="col s6 m4 mb-s-1">
+          <div class="atas">
+            <img src="img/lesson.svg" width="50" class="mb-1" alt="lesson">
+            Tutorial Gratis
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="body-content"></div>
+
+
+  <!-- Footer -->
+  <footer class="teal darken-4 page-footer">
+    <div id="subscription">
+      <div class="container">
+        <div class="card-panel">
+          <div class="row mb-0">
+            <p class="mb-1">Masukan email kamu untuk mendapatkan update dari <b>Joona Code</b></p>
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email Kamu</label>
+              <a class="waves-effect waves-light btn">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p">
+      <div class="row">
+        <div class="col l4 mr-3 mb-1 s12">
+          <h2 class="white-text mt-0 font-bold">Joona Code</h2>
+          <p class="grey-text text-lighten-4 font-light">Tempat belajar web programming dan download source code gratis</p>
+          <h5 class="white-text">Social Media</h5>
+          <div class="list-social-media">
+            <a href="google.com" target="_blank" title="whatsapp">
+              <img src="img/whatsapp.svg" width="25" class="mb-1" alt="wa">
+            </a>
+            <a href="facebook.com/mark" target="_blank" title="facebook">
+              <img src="img/facebook.svg" width="25" class="mb-1" alt="fb">
+            </a>
+            <a href="instagram.com/cepguna20" target="_blank" title="instagram">
+              <img src="img/ig.svg" width="25" class="mb-1" alt="">
+            </a>
+            <a href="twitter.com" target="_blank" title="twitter">
+              <img src="img/twitter.svg" width="25" class="mb-1" alt="twitter">
+            </a>
+            <a href="github.com/joonacode" target="_blank" title="github">
+              <img src="img/github.svg" width="25" class="mb-1" alt="github">
+            </a>
+          </div>
+        </div>
+        <div class="col l2 mb-1 s12">
+          <h5 class="white-text">Navigasi</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3 link-action" href="#home">Home</a></li>
+                <li><a class="grey-text text-lighten-3 link-action" href="#tutorial">Tutorial</a></li>
+                <li><a class="grey-text text-lighten-3 link-action" href="#template">Template</a></li>
+                <li><a class="grey-text text-lighten-3 link-action" href="#sc">Source Code</a></li>
+              </ul>
+        </div>
+        <div class="col l3 mb-1 s12">
+          <h5 class="white-text">Alamat</h5>
+          <p>Bandung, Indonesia.</p>
+          <span>joonacode@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+        Copyright © 2020 Joona Code
+      </div>
+    </div>
+  </footer>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function() {
+            console.log("Pendaftaran ServiceWorker berhasil");
+          })
+          .catch(function() {
+            console.log("Pendaftaran ServiceWorker gagal");
+          });
+      });
+    } else {
+      console.log("ServiceWorker belum didukung browser ini.");
+    }
+  </script>
+</body>
+
+</html>
